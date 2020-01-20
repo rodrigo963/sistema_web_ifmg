@@ -236,6 +236,7 @@
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col-md-12">
                 <div class="box box-primary">
@@ -810,7 +811,7 @@
         user.conforto = 'incômodo'
 
       }
-
+ 
 
       if (document.getElementById('op4').checked == true) {
         user.sexo = 'masculino'
@@ -828,7 +829,7 @@
       user.comp_b = document.getElementById('comp_b').value
       user.ref_car=document.getElementById('consult').value
       url=sessionStorage.url
-      axios.post(`${url}cad_av`, user);
+      axios.post(`${url}cad_av`, user); 
  
       document.getElementById('op1').checked=false
       document.getElementById('op2').checked=false

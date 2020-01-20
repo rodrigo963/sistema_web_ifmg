@@ -126,7 +126,7 @@
                 <ul class="treeview-menu">
                   <li><a href="../dados/consultar-marca.html"><i class="fa fa-circle-o"></i> Marca</a></li>
                   <li><a href="../dados/consultar-carros.html"><i class="fa fa-circle-o"></i> Veículo</a></li>
-                  <li><a href="..dados/consultar-avaliações.html"><i class="fa fa-circle-o"></i> Avaliações</a></li>
+                  <li><a href="../dados/consultar-avaliações.html"><i class="fa fa-circle-o"></i> Avaliações</a></li>
 
                 </ul>
               </li>
@@ -210,7 +210,7 @@
                     <!-- Custom Tabs (Pulled to the right) -->
                     <div class="nav-tabs-custom">
                       <ul class="nav nav-tabs pull-right">
-                        <li  class="active"><a href="#tab_1-1" data-toggle="tab">Banco</a></li>
+                        <li class="active"><a href="#tab_1-1" data-toggle="tab">Banco</a></li>
                         <li><a href="#tab_2-2" data-toggle="tab">Volante</a></li>
                         <li><a href="#tab_3-3" data-toggle="tab">Pedaleira</a></li>
 
@@ -221,29 +221,28 @@
                         <div class="tab-pane active" id="tab_1-1">
                           <div class="box box-primary">
                             <div class="box-header with-border">
-                              <h3 class="box-title">Eixos X ; Z - Banco</h3>
+                              <h3 class="box-title">Eixo X - Banco</h3>
                             </div>
                             <div class="box-body">
                               <div class="row">
                                 <div class="col-xs-6">
-                                  <input type="number" id="rbx" class="form-control" placeholder="Eixo X" onchange="atualizaRangeRbx(this)">
+                                  <input type="number" id="rbx" class="form-control" placeholder="Eixo X">
+                                </div>
+                                <!-- <div class="col-xs-6">
+                                  <input type="number" id="rbx" class="form-control" placeholder="Eixo X"
+                                    onchange="atualizaRangeRbx(this)">
                                   <form class="multi-range-field my-5 pb-5">
-                                    <input id="multi1" class="multi-range" type="range" onchange="atualizaRbx(this)"/>
+                                    <input id="multi1" class="multi-range" type="range" onchange="atualizaRbx(this)" />
                                   </form>
-                                </div>
+                                </div> -->
 
-                                <div class="col-xs-6">
-                                  <input type="number" id="rbz" class="form-control" placeholder="Eixo Z">
-                                  <p></p>
-                                  <td>
-                                    <button type="submit" onclick="graf()"
-                                      class="btn btn-block btn-primary">Mover</button>
-                                  </td>
-                                </div>
-                              </div>
+                               </div>
+
                             </div>
+
                             <!-- /.box-body -->
                           </div>
+
                           <!-- /.box -->
                         </div>
                         <!-- /.tab-pane -->
@@ -251,22 +250,27 @@
 
                           <div class="box box-primary">
                             <div class="box-header with-border">
-                              <h3 class="box-title">Eixos X ; Z - Volante</h3>
+                              <h3 class="box-title">Eixos X ; Angular - Volante</h3>
                             </div>
                             <div class="box-body">
                               <div class="row">
                                 <div class="col-xs-6">
                                   <input type="number" id="rvx" class="form-control" placeholder="Eixo X">
+                                 
                                 </div>
+                                <!-- <div class="col-xs-6">
+                                  <input type="number" id="rvx" class="form-control" placeholder="Eixo X"
+                                  onchange="atualizaRangeRbx(this)">
+                                  <form class="multi-range-field my-5 pb-5">
+                                    <input id="multi1" class="multi-range" type="range" onchange="atualizaRbx(this)" />
+                                  </form>
+                                </div> -->
 
                                 <div class="col-xs-6">
-                                  <input type="number" id="rvz" class="form-control" placeholder="Eixo Z">
+                                  <input type="number" id="rvz" class="form-control" placeholder="Eixo angular">
 
                                   <p></p>
-                                  <td>
-                                    <button type="submit" onclick="graf()"
-                                      class="btn btn-block btn-primary">Mover</button>
-                                  </td>
+
                                 </div>
                               </div>
 
@@ -294,10 +298,7 @@
                                   <input type="number" id="rpz" class="form-control" placeholder="Eixo Z">
 
                                   <p></p>
-                                  <td>
-                                    <button type="submit" onclick="graf()"
-                                      class="btn btn-block btn-primary">Mover</button>
-                                  </td>
+
                                 </div>
                               </div>
 
@@ -307,229 +308,234 @@
 
                         </div>
 
-                        <!-- /.tab-pane -->
-
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-        <section class="content">
-          <div class="row">
-
-
-
-
-            <div id="appg">
-              <div class="row">
-                <div class="col-md-12">
-
-
-                  <!-- Line chart -->
-                  <div class="box box-primary">
-                    <div class="box-header with-border">
-                      <i class="fa fa-bar-chart-o"></i>
-
-                      <h3 class="box-title">Eixo X-Z Posição atual</h3>
-
-                      <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                            class="fa fa-minus"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="box-body">
-                      <div id="line-chart" style="height: 500px;"></div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
-                      Avaliar posição
-                    </button>
-                  </div>
-
-
-
-
-
-                  <section class="content">
-
-
-
-
-
-
-
-                    <div class="modal modal-info fade" id="modal-info">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">Avaliar posição</h4>
-                          </div>
-                          <div class="modal-body">
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="optionsRadios2" id="op1" value="option1" >
-                                Confortável
-                              </label>
+                        <div class="box-body">
+                          <div class="row">
+                            <div class="col-xs-5">
+                              <td>
+                                <button type="button" onclick="graf()" class="btn btn-block btn-primary">Mover</button>
+                              </td>
                             </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="optionsRadios2" id="op2" value="option2">
-                                Aceitável
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="optionsRadios2" id="op3" value="option3">
-                                Incômodo
-                              </label>
-                            </div>
-
-                          </div>
-                          <div class="modal-header">
-                            <h4 class="modal-title">Dados do avaliador</h4>
-                          </div>
-                          <div class="col-xs-12 table-responsive">
-                            <table class="table table-striped">
-                              <thead>
-                                <tr>
-                                  <th>Sexo</th>
-                                  <th>Idade</th>
-                                  <th>Peso(kg)</th>
-                                </tr>
-                              <tbody>
-                                <tr>
-
-                                  <td>
-
-                                    <div class="radio">
-                                      <label>
-                                        <input type="radio" name="optionsRadios" id="op4" value="masculino" >
-                                        Masculino
-                                      </label>
-                                    </div>
-                                    <div class="radio">
-                                      <label>
-                                        <input type="radio" name="optionsRadios" id="op5" value="feminino">
-                                        Feminino
-                                      </label>
-                                    </div>
-
-                                  </td>
-
-                                  <td>
-
-                                    <div class="box-body">
-                                      <div class="row">
-                                        <div class="col-xs-12">
-                                          <input id="idade" type="number" class="form-control">
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                  </td>
-
-
-                                  <td>
-
-                                    <div class="box-body">
-                                      <div class="row">
-                                        <div class="col-xs-12">
-                                          <input id="peso" type="number" class="form-control">
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th>Altura (m)</th>
-                                  <th>Comprimento pernas (m)</th>
-                                  <th>Comprimento Braços (m)</th>
-                                </tr>
-                                </thead>
-                              <tbody>
-
-                                <tr>
-                                  <td>
-
-                                    <div class="box-body">
-                                      <div class="row">
-                                        <div class="col-xs-12">
-                                          <input id="altura" type="number" class="form-control">
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                  </td>
-                                  <td>
-
-                                    <div class="box-body">
-                                      <div class="row">
-                                        <div class="col-xs-12">
-                                          <input id="comp_p" type="number" class="form-control">
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                  </td>
-                                  <td>
-
-                                    <div class="box-body">
-                                      <div class="row">
-                                        <div class="col-xs-12">
-                                          <input id="comp_b" type="number" class="form-control">
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                  </td>
-
-                                </tr>
-
-                              </tbody>
-                            </table>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-outline pull-left"
-                              data-dismiss="modal">Cancelar</button>
-                            <button onclick="salvar()" type="button" class="btn btn-outline"
-                              data-dismiss="modal">Confirmar
-                              avliação</button>
                           </div>
                         </div>
-                        <!-- /.modal-content -->
+
                       </div>
-                      <!-- /.modal-dialog -->
                     </div>
-
-                  </section>
+                  </div>
                 </div>
-                <!-- ****************************Lateral************************** -->
+
               </div>
-
-
-
             </div>
-          </div>
-        </section>
+
+
+            <section class="content">
+              <div class="row">
+
+
+
+
+                <div id="appg">
+                  <div class="row">
+                    <div class="col-md-12">
+
+
+                      <!-- Line chart -->
+                      <div class="box box-primary">
+                        <div class="box-header with-border">
+                          <i class="fa fa-bar-chart-o"></i>
+
+                          <h3 class="box-title">Eixo X-Z Posição atual</h3>
+
+                          <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="box-body">
+                          <div id="line-chart" style="height: 500px;"></div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
+                          Avaliar posição
+                        </button>
+                      </div>
+
+
+
+
+
+                      <section class="content">
+
+
+
+
+
+
+
+                        <div class="modal modal-info fade" id="modal-info">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Avaliar posição</h4>
+                              </div>
+                              <div class="modal-body">
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="optionsRadios2" id="op1" value="option1">
+                                    Confortável
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="optionsRadios2" id="op2" value="option2">
+                                    Aceitável
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="optionsRadios2" id="op3" value="option3">
+                                    Incômodo
+                                  </label>
+                                </div>
+
+                              </div>
+                              <div class="modal-header">
+                                <h4 class="modal-title">Dados do avaliador</h4>
+                              </div>
+                              <div class="col-xs-12 table-responsive">
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Sexo</th>
+                                      <th>Idade</th>
+                                      <th>Peso(kg)</th>
+                                    </tr>
+                                  <tbody>
+                                    <tr>
+
+                                      <td>
+
+                                        <div class="radio">
+                                          <label>
+                                            <input type="radio" name="optionsRadios" id="op4" value="masculino">
+                                            Masculino
+                                          </label>
+                                        </div>
+                                        <div class="radio">
+                                          <label>
+                                            <input type="radio" name="optionsRadios" id="op5" value="feminino">
+                                            Feminino
+                                          </label>
+                                        </div>
+
+                                      </td>
+
+                                      <td>
+
+                                        <div class="box-body">
+                                          <div class="row">
+                                            <div class="col-xs-12">
+                                              <input id="idade" type="number" class="form-control">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                      </td>
+
+
+                                      <td>
+
+                                        <div class="box-body">
+                                          <div class="row">
+                                            <div class="col-xs-12">
+                                              <input id="peso" type="number" class="form-control">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th>Altura (m)</th>
+                                      <th>Comprimento pernas (m)</th>
+                                      <th>Comprimento Braços (m)</th>
+                                    </tr>
+                                    </thead>
+                                  <tbody>
+
+                                    <tr>
+                                      <td>
+
+                                        <div class="box-body">
+                                          <div class="row">
+                                            <div class="col-xs-12">
+                                              <input id="altura" type="number" class="form-control">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                      </td>
+                                      <td>
+
+                                        <div class="box-body">
+                                          <div class="row">
+                                            <div class="col-xs-12">
+                                              <input id="comp_p" type="number" class="form-control">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                      </td>
+                                      <td>
+
+                                        <div class="box-body">
+                                          <div class="row">
+                                            <div class="col-xs-12">
+                                              <input id="comp_b" type="number" class="form-control">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                      </td>
+
+                                    </tr>
+
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline pull-left"
+                                  data-dismiss="modal">Cancelar</button>
+                                <button onclick="salvar()" type="button" class="btn btn-outline"
+                                  data-dismiss="modal">Confirmar
+                                  avliação</button>
+                              </div>
+                            </div>
+                            <!-- /.modal-content -->
+                          </div>
+                          <!-- /.modal-dialog -->
+                        </div>
+
+                      </section>
+                    </div>
+                    <!-- ****************************Lateral************************** -->
+                  </div>
+
+
+
+                </div>
+              </div>
+            </section>
 
 
 
@@ -708,15 +714,15 @@
   <script>
     function salvar() {
       const user = {
-          conforto: '',
-          sexo: '',
-          idade: '',
-          peso: '',
-          altura: '',
-          comp_p: '',
-          comp_b: '',
-          ref_car:'Livre',
-        }
+        conforto: '',
+        sexo: '',
+        idade: '',
+        peso: '',
+        altura: '',
+        comp_p: '',
+        comp_b: '',
+        ref_car: 'Livre',
+      }
       if (document.getElementById('op1').checked == true) {
         user.conforto = 'confortável'
 
@@ -725,7 +731,7 @@
         user.conforto = 'aceitável'
 
       }
-      else { 
+      else {
         user.conforto = 'incômodo'
 
       }
@@ -745,56 +751,56 @@
       user.altura = document.getElementById('altura').value
       user.comp_p = document.getElementById('comp_p').value
       user.comp_b = document.getElementById('comp_b').value
-      url=sessionStorage.url
+      url = sessionStorage.url
       axios.post(`${url}cad_av`, user);
- 
 
 
-      document.getElementById('op1').checked=false
-      document.getElementById('op2').checked=false
-      document.getElementById('op3').checked=false
-      document.getElementById('op4').checked=false
-      document.getElementById('op5').checked=false
 
-  
-      document.getElementById('idade').value=''
-      document.getElementById('peso').value=''
-      document.getElementById('altura').value=''
-      document.getElementById('comp_p').value=''
-      document.getElementById('comp_b').value=''
+      document.getElementById('op1').checked = false
+      document.getElementById('op2').checked = false
+      document.getElementById('op3').checked = false
+      document.getElementById('op4').checked = false
+      document.getElementById('op5').checked = false
+
+
+      document.getElementById('idade').value = ''
+      document.getElementById('peso').value = ''
+      document.getElementById('altura').value = ''
+      document.getElementById('comp_p').value = ''
+      document.getElementById('comp_b').value = ''
 
 
     }
   </script>
-<script>
-  function test(){
+  <script>
+    function test() {
+      const user = {
+        x1: '',
+        x2: ''
+      }
+      user.x1 = document.getElementById('rbx').value;
+      document.getElementById('rbz').value = user.x1
+      url = sessionStorage.url
+      axios.post(`${url}mov_car`, user);
+
+    }
+
+  </script>
+
+
+
+  <script>
+    function atualizaRangeRbx(ctx) {
+      document.getElementById('multi1').value = ctx.value;
+    }
+
+    function atualizaRbx(ctx) {
+      document.getElementById('rbx').value = ctx.value;
+    }
     const user = {
-          x1: '',
-          x2: ''
-        }
-    user.x1 = document.getElementById('rbx').value;
-    document.getElementById('rbz').value=user.x1
-    url=sessionStorage.url
-    axios.post(`${url}mov_car`, user);
-
-  }
-
-</script>
-
-
-
-<script>
-  function atualizaRangeRbx (ctx) {
-    document.getElementById('multi1').value = ctx.value;
-  }
-
-  function atualizaRbx(ctx){
-    document.getElementById('rbx').value = ctx.value;
-  }
-  const user = {
-          x1: '0',
-          x2: '0'
-        }
+      x1: '0',
+      x2: '0'
+    }
 
     var botao = document.getElementById('exemplo');
     botao.addEventListener('mousedown', pressiona, false);
@@ -803,33 +809,33 @@
     var qualquer = 0;
     var intervalo;
     function pressiona() {
-        intervalo = setInterval(algumacoisa, 2500);
+      intervalo = setInterval(algumacoisa, 2500);
     }
 
     function algumacoisa() {
-        qualquer += 1;
-        user.x1='1';    
-        if((user.x1=='1') && (user.x2=='0')){
-      user.x2='1';
-      url=sessionStorage.url
-      axios.post(`${url}mov_car`, user);
-    }
-        document.getElementById('rbx').value=qualquer;
-         
+      qualquer += 1;
+      user.x1 = '1';
+      if ((user.x1 == '1') && (user.x2 == '0')) {
+        user.x2 = '1';
+        url = sessionStorage.url
+        axios.post(`${url}mov_car`, user);
       }
- 
+      document.getElementById('rbx').value = qualquer;
+
+    }
+
     function solta() {
-        clearInterval(intervalo);
-        user.x1='0'; 
-        if((user.x1=='0') &&(user.x2=='1') ){
-      user.x2='0'
-      url=sessionStorage.url
-      axios.post(`${url}mov_car`, user);
+      clearInterval(intervalo);
+      user.x1 = '0';
+      if ((user.x1 == '0') && (user.x2 == '1')) {
+        user.x2 = '0'
+        url = sessionStorage.url
+        axios.post(`${url}mov_car`, user);
+      }
     }
-    }
-    
-    
-</script>
+
+
+  </script>
 
 
 

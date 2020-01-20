@@ -23,6 +23,10 @@ module.exports = app => {
 
     app.route('/remover_marca')
         .post(app.api.db_marcas.remover_marca)
+
+
+
+
     //// Carros
 
 
@@ -54,6 +58,8 @@ module.exports = app => {
         .get(app.api.user.cont_car)
 
    
+        app.route('/mov_car')
+        .post(app.api.user.mov_car)
 
 
 
@@ -63,14 +69,12 @@ module.exports = app => {
 
 
 
-    
+    //////// Avaliações
 
     app.route('/cad_av')
-        .post(app.api.user.save_av)
-        .get(app.api.user.get_av)
+        .post(app.api.db_av.save_av)
+        .get(app.api.db_av.get_av)
 
 
-    app.route('/mov_car')
-        .post(app.api.user.mov_car)
-
+   
 } 
