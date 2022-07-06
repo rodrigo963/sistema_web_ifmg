@@ -59,7 +59,7 @@
     "pace": "0.0.4",
     "qrcode": "^1.4.1",
     "raphael": "^2.2.7",
-    "select2": "^4.0.3",
+    "select2": "^4.0.6",
     "slimscroll": "^0.9.1",
     "sweetalert2": "^9.3.17",
     "vue-toasted": "^1.1.26"
